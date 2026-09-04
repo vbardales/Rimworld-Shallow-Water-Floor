@@ -29,6 +29,29 @@ The consequence is not cosmetic: **neither terrain could be built**, in any
 version, since 2021. They now ask for `Light`, the permissive one of the two,
 which every soil and every floor provides.
 
+Second fix, of the author's own making rather than the parser's: **neither
+terrain had a work cost.** `WaterShallowBase` declares no `WorkToBuild`, and the
+stat's `defaultBaseValue` is `1`, so each tile was laid instantly — free fertile
+ground for two wood. `RuneWaterShallow` is now 120 work, alongside straw matting
+and a shade above the 85 of a wood floor; `RuneFertileWater` is 400, still well
+under the 700 work per tile of a hydroponics basin, which also wants steel,
+components and a power hookup.
+
+This is the one place where the port departs from the author's numbers. It was
+weighed against leaving them alone, and the deciding argument is that they were
+never *chosen*: the field is simply absent, and the value of 1 is the game's
+fallback, not a design. The 2-wood cost, the 1.25 fertility and the zero path
+cost — which the author did write — are untouched.
+
+## What was added
+
+- A `description` on each terrain. Every vanilla floor has one; without it the
+  build menu tooltip was empty.
+- `drawStyleCategory` set to `Floors`, so the two terrains get the same shape
+  tools as every vanilla floor. `FloorBase` carries it; `WaterShallowBase` does
+  not, because natural water is never built.
+- A French translation of the two labels and the two new descriptions.
+
 ## What was left out
 
 `Textures/ShallowWaterFloor.png` — 1.3 MB of preview artwork filed under
@@ -39,8 +62,9 @@ which every soil and every floor provides.
 
 `WaterShallowBase` still exists, and `waterDepthShader`, `layerable`,
 `renderPrecedence`, `resourcesFractionWhenDeconstructed` and the `GrowSoil` and
-`Diggable` affordances are all still read from XML. Nothing else in the two defs
-needed changing.
+`Diggable` affordances are all still read from XML. Nothing in the two defs was
+broken by 1.6 itself: everything listed above under "What was fixed" was already
+broken in 1.3.
 
 One thing deliberately left as the author wrote it: `RuneFertileWater` overrides
 `affordances` instead of extending them, so it does not inherit the water
