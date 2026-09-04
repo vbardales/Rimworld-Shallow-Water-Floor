@@ -11,13 +11,22 @@
   <TerrainDef ParentName="WaterShallowBase">
     <defName>RuneWaterShallow</defName>
     <label>shallow water</label>
+    <description>A shallow pool, dug out and flooded a tile at a time. It behaves like the natural kind: pawns wade through it, it can be bridged over, and nothing grows in it.</description>
     <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
     <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>394</renderPrecedence>
     <costList>
       <WoodLog>2</WoodLog>
     </costList>
+    <!-- WaterShallowBase declares no WorkToBuild, and the stat's defaultBaseValue is 1:
+         without this the tile was laid instantly. 120 puts it alongside straw matting,
+         a shade above the 85 of a wood floor - digging out a tile and flooding it is
+         not less work than laying planks over it. -->
+    <statBases>
+      <WorkToBuild>120</WorkToBuild>
+    </statBases>
     <designationCategory>Floors</designationCategory>
+    <drawStyleCategory>Floors</drawStyleCategory>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <layerable>true</layerable>
   </TerrainDef>
@@ -31,13 +40,22 @@
   <TerrainDef ParentName="WaterShallowBase">
     <defName>RuneFertileWater</defName>
     <label>fertile water</label>
+    <description>Shallow water seeded with silt and rotting matter, rich enough to grow crops in and shallow enough to walk through without slowing down. It is not water any more as far as the colony is concerned: nothing can be bridged over it, and it will not carry a waterproof conduit.</description>
     <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
     <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>394</renderPrecedence>
     <costList>
       <WoodLog>2</WoodLog>
     </costList>
+    <!-- Same missing-stat fix as above, but priced higher: this tile beats plain soil
+         on fertility for two wood and no power. A hydroponics basin costs 2800 work
+         for four tiles - 700 each - on top of steel, components and a power hookup,
+         for fertility 2.8. 400 sits well under that per tile while no longer being free. -->
+    <statBases>
+      <WorkToBuild>400</WorkToBuild>
+    </statBases>
     <designationCategory>Floors</designationCategory>
+    <drawStyleCategory>Floors</drawStyleCategory>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <layerable>true</layerable>
     <pathCost>0</pathCost>

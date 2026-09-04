@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- EN: shallow water -->
+  <RuneWaterShallow.label>eau peu profonde</RuneWaterShallow.label>
+  <!-- EN: A shallow pool, dug out and flooded a tile at a time. It behaves like the natural kind:
+       pawns wade through it, it can be bridged over, and nothing grows in it. -->
+  <RuneWaterShallow.description>Un bassin peu profond, creusé et mis en eau case par case. Il se comporte comme l'eau naturelle : les colons y pataugent, on peut jeter un pont par-dessus, et rien n'y pousse.</RuneWaterShallow.description>
+
+  <!-- EN: fertile water -->
+  <RuneFertileWater.label>eau fertile</RuneFertileWater.label>
+  <!-- EN: Shallow water seeded with silt and rotting matter, rich enough to grow crops in and
+       shallow enough to walk through without slowing down. It is not water any more as far as the
+       colony is concerned: nothing can be bridged over it, and it will not carry a waterproof
+       conduit. -->
+  <RuneFertileWater.description>De l'eau peu profonde ensemencée de limon et de matière en décomposition, assez riche pour qu'on y fasse pousser des cultures et assez basse pour qu'on la traverse sans ralentir. Ce n'est plus de l'eau du point de vue de la colonie : on ne peut rien y jeter comme pont, et elle ne porte pas de conduit étanche.</RuneFertileWater.description>
+
+</LanguageData>
