@@ -1,14 +1,15 @@
 # Art — sources
 
-Full-resolution originals. RimWorld never reads this folder; `About/` holds the cut-down files
-that ship.
+Full-resolution originals. RimWorld never reads this folder, and neither does Steam: only `Mod/`
+is published, and it holds the cut-down files that ship. The two originals here weigh 3.0 MB
+between them, against 620 KB for the whole of `Mod/` — which is the reason for the split.
 
 ## `Preview-source.png` — 1672 x 941, 1780 KB
 
 Above Steam's hard 1 MB limit as generated, which is the recurring trap: image models render
 large by default.
 
-`About/Preview.png` is composed from it at **896 x 504**, 577 KB. The name and the summary line
+`Mod/About/Preview.png` is composed from it at **896 x 504**, 577 KB. The name and the summary line
 are engraved directly at final size — Chrome headless rasterises an HTML page 896 px wide with
 this file as its background, so the glyphs are never resampled:
 
@@ -29,11 +30,11 @@ there. It is written for whoever opens the mod page.
 
 ## `ModIcon-source.png` — 1254 x 1254, 1267 KB
 
-`About/ModIcon.png` is derived from it: scaled to **128 x 128**, 21 KB. The icon renders at
+`Mod/About/ModIcon.png` is derived from it: scaled to **128 x 128**, 21 KB. The icon renders at
 roughly 32 px in the in-game mod list, so the full-resolution file was 62 times the weight it
 needed to be — and it would have travelled to every subscriber, since the Workshop uploader
 publishes the mod folder as-is with no way to exclude anything.
 
 ```
-ffmpeg -i Art/ModIcon-source.png -vf "scale=128:128:flags=lanczos" -y About/ModIcon.png
+ffmpeg -i Art/ModIcon-source.png -vf "scale=128:128:flags=lanczos" -y Mod/About/ModIcon.png
 ```
