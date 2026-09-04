@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>nelim.shallowwaterfloortile</packageId>
+  <name>Shallow Water Floor Tile 1.6</name>
+  <author>rune1993 - 1.6 port: nelim</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Shallow water you can lay down like a floor.
+
+Two terrains, both built for 2 wood from the Floors tab:
+- Shallow water, which behaves like the natural kind.
+- Fertile water, which crops grow in - fertility 1.25, and no movement penalty.
+
+The original stopped at 1.3.
+
+Fixed along the way: both terrains asked for two build surfaces at once, which is not a thing the game can read - it looked for a surface called "HeavyLight", found none, and neither terrain could be built. They now ask for a light surface, which any soil or floor provides.</description>
+</ModMetaData>

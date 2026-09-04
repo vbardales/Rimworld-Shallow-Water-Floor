@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Shallow water, laid down like a floor.
+
+       terrainAffordanceNeeded takes ONE value, not a list: the game reads it as a
+       single TerrainAffordanceDef. The original listed Heavy and Light, which the
+       parser ran together into "HeavyLight" - a surface no def declares - so
+       neither terrain could ever be built. Light is the permissive one of the two,
+       and every soil and floor provides it. -->
+  <TerrainDef ParentName="WaterShallowBase">
+    <defName>RuneWaterShallow</defName>
+    <label>shallow water</label>
+    <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <renderPrecedence>394</renderPrecedence>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <designationCategory>Floors</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <layerable>true</layerable>
+  </TerrainDef>
+
+  <!-- The same water, but crops grow in it.
+
+       affordances is overridden rather than extended, so this one does NOT inherit
+       the water affordances of its parent - no ShallowWater, no Bridgeable. That is
+       the author's choice and it is kept: it is what makes the tile behave like
+       ground you can plant on rather than like water. -->
+  <TerrainDef ParentName="WaterShallowBase">
+    <defName>RuneFertileWater</defName>
+    <label>fertile water</label>
+    <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <renderPrecedence>394</renderPrecedence>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <designationCategory>Floors</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <layerable>true</layerable>
+    <pathCost>0</pathCost>
+    <resourcesFractionWhenDeconstructed>0.4</resourcesFractionWhenDeconstructed>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>1.25</fertility>
+  </TerrainDef>
+
+</Defs>
