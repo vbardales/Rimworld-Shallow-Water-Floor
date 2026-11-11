@@ -19,7 +19,7 @@ workshop: 3811403332
 published: yes
 tested_on: never
 remaining:
-  - "2026-11-11: unverified: never seen running"
+  - "2026-11-11: unverified: never seen running; Pickle ticket 20261111-231408-822-d1e7 queued (tree 4e769e2), TM wakes the session with RUN_DONE"
   - "2026-11-11: unverified: upstream git remotes of rune1993's mod not searched"
   - "2026-11-11: defect: Art/ holds files outside the closed set (Gallery/, ModIcon-signature-candidate.png, README.md)"
 updated: 2026-11-11
