@@ -13,6 +13,6 @@
        shallow enough to walk through without slowing down. It is not water any more as far as the
        colony is concerned: nothing can be bridged over it, and it will not carry a waterproof
        conduit. -->
-  <RuneFertileWater.description>De l'eau peu profonde ensemencée de limon et de matière en décomposition, assez riche pour qu'on y fasse pousser des cultures et assez basse pour qu'on la traverse sans ralentir. Ce n'est plus de l'eau du point de vue de la colonie : on ne peut rien y jeter comme pont, et elle ne porte pas de conduit étanche.</RuneFertileWater.description>
+  <RuneFertileWater.description>De l'eau peu profonde ensemencée de limon et de matière en décomposition, assez riche pour qu'on y fasse pousser des cultures et assez peu profonde pour qu'on la traverse sans ralentir. Ce n'est plus de l'eau du point de vue de la colonie : aucun pont ne peut y être construit, et elle ne peut pas accueillir de conduit étanche.</RuneFertileWater.description>
 
 </LanguageData>
