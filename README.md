@@ -71,6 +71,9 @@ published under the usual practice for abandoned mods: **explicit credit to rune
 the original, and removal on request.** If rune1993 comes back to the mod, or asks for this to be
 taken down, it comes down.
 
+What I added to it (the 1.6 fixes, the French translation, the documentation and the artwork) is
+under the MIT licence, see `LICENSE`. That licence does not cover rune1993's original work.
+
 If I do not answer within a reasonable time after being contacted, anyone may freely update this
 or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 

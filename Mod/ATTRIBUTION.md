@@ -8,6 +8,9 @@ No licence is stated on the Workshop page or in the mod folder. The mod is two
 terrain defs and no code, and the port keeps the author's defNames, values and
 intent; if rune1993 asks for it to come down, it comes down.
 
+What was added in this port (the 1.6 fixes, the French translation, the documentation, the artwork)
+is under the MIT licence, see `LICENSE`. It does not cover rune1993's original work.
+
 ## What was taken
 
 | Element | Source |

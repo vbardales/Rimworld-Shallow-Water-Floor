@@ -7,7 +7,7 @@ visibility: public
 detached: no
 workflow_stage: makeSources
 licence: silent
-licence_at: "2026-09-12: nothing on the Workshop page nor in the mod folder of rune1993's original; no LICENSE file written here (nothing to license, only MIT carries a notice)"
+licence_at: "2026-11-11: original by rune1993 declares no licence (silent); owner decision: MIT on what is added here only, LICENSE excludes the original work"
 upstream_mod_remotes: N/A      # none found, not searched on GitHub or GitLab (replay 2026-11-11)
 settings_audit: unchecked
 localization: unchecked
