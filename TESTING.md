@@ -44,3 +44,21 @@ Each scenario starts on a normal soil map, a colonist with Construction, 10 wood
 5. **No settings page.** Expected: Mod options lists no entry for this mod, no MainButtons shortcut.
 6. **No error in the log.** Expected: `Player.log` holds no red error naming `RuneWaterShallow`
    or `RuneFertileWater` after loading and playing 1 to 5.
+
+## Pickle suite (written 2026-11-11, not run)
+
+`Tests/Pickle/Mod/Pickle/Features/`, map `Tests/Pickle/wsl-deps.default.map` (Pickle Tools modules
+StageDecor, ScreenshotStudio, ColonistRace; vanilla only). Steps filed by NPT (PickleTools commit
+`f3adf94`, compiled, not played). `Check-Steps.ps1`: every step line resolves to exactly one expression.
+
+| Scenario | File | Covers | Failure means |
+|---|---|---|---|
+| terrains logged | `01` | terrain-stats attachment: fertility, path cost, affordances (Bridgeable), cost, work; read by a person against the table above | no error logged |
+| shallow water built | `01` | in-game scenario 1 (colonist builds 2 tiles on soil, game placement check, terrain read back) | the old `terrainAffordanceNeeded` bug is back |
+| fertile water built | `01` | in-game scenario 1, second terrain | same |
+| Floors tab lists both | `02` | in-game scenario 1, first half (offered to the player) | the step reads building defs: a terrain designator may not match; the failure text says what the tab holds |
+
+Not played by Pickle, proved by the static table: growth on fertile water only (fertility 1.25 and
+`GrowSoil` versus none), path cost 0 versus 30, no bridge over fertile water (no `Bridgeable`),
+no waterproof conduit. In-game scenarios 2, 3, 4 above are read from the terrain-stats attachment, not
+replayed: a Pickle run costs tens of minutes and restates what the defs say.

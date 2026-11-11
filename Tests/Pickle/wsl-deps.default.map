@@ -1,0 +1,10 @@
+# Default pass for Shallow Water Floor Tile Renew: vanilla only, plus the Pickle Tools modules the steps come from.
+# The bundle is committed under PickleTools/Mod: this shell replaces it (see StandaloneBase), as in
+# DrumBathHygiene wsl-deps.tools.map. Never list the bundle AND a standalone module twice (Ambiguous step).
+# Modules: StageDecor (builds the floor, terrain assert, decor removal), ScreenshotStudio (terrain-stats log),
+# ColonistRace (architect tab steps).
+# 1.7 pass: same lines with path:PickleTools/Build17/<Module>.
+nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod

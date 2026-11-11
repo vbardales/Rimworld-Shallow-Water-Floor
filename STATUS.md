@@ -5,7 +5,7 @@ repo: Rimworld-Shallow-Water-Floor
 remote: https://github.com/vbardales/Rimworld-Shallow-Water-Floor.git
 visibility: public
 detached: no
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 licence: silent
 licence_at: "2026-11-11: original by rune1993 declares no licence (silent); owner decision: MIT on what is added here only, LICENSE excludes the original work"
 upstream_mod_remotes: N/A      # none found, not searched on GitHub or GitLab (replay 2026-11-11)
@@ -20,11 +20,10 @@ published: yes
 tested_on: never
 remaining:
   - "2026-11-11: unverified: never seen running"
-  - "2026-11-11: feature: Pickle suite (7.d) to write once NPT names the terrain steps"
   - "2026-11-11: unverified: upstream git remotes of rune1993's mod not searched"
   - "2026-11-11: defect: Art/ holds files outside the closed set (Gallery/, ModIcon-signature-candidate.png, README.md)"
 updated: 2026-11-11
-protocols_read_sha: ead9cafa92dd96d6fa0daed3178e8d98dd56f5bf
+protocols_read_sha: f859f6aa73ec1ba363ea978072047685f77d77a9
 ---
 
 # Shallow Water Floor Tile Renew: status
@@ -61,5 +60,5 @@ Check it with `scripts/Check-Status.ps1 -Mod <Folder>` (no ERROR) before the com
 - 7.a Scenarios: `TESTING.md` (figures of the public text checked against the game's defs, 6 in-game scenarios).
 - 7.b Automated tests: no test project (no code). Not applicable beyond the shared checks, rerun today: `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 4 keys 0 error, `Check-PatchTargets` PASS (0 operation), `Check-Textures` PASS. No `Rule-OwnValues.ps1`: two defs, nine facts, all proved by reading in `TESTING.md`; a script would repeat that table. `Tests/Test-Mod.ps1` skeleton comes with the CI/CD pre-publication, not before.
 - 7.c XML tests: `Check-DefRefs` (parents and references resolve), `Check-XmlFields` (2 files, no unknown field), green.
-- 7.d Pickle suite: not written yet. Question sent to NPT through the TM (which terrain steps exist). Behaviours that need the game: build both terrains, sow on fertile water, walk speed, bridge placement.
+- 7.d Pickle suite written, not run: `Tests/Pickle/` (2 features, 4 scenarios, map `wsl-deps.default.map`), steps by NPT `f3adf94`, `Check-Steps.ps1` all resolve. Growth, path cost, bridge: static table in `TESTING.md`, not replayed.
 - 7.e/7.f: tested sha `40d6e4f`; any later commit to `Mod/` reopens 7.b and 7.c.
