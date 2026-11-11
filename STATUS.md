@@ -20,10 +20,11 @@ published: yes
 tested_on: never
 remaining:
   - "2026-11-11: unverified: never seen running"
+  - "2026-11-11: feature: Pickle suite (7.d) to write once NPT names the terrain steps"
   - "2026-11-11: unverified: upstream git remotes of rune1993's mod not searched"
   - "2026-11-11: defect: Art/ holds files outside the closed set (Gallery/, ModIcon-signature-candidate.png, README.md)"
 updated: 2026-11-11
-protocols_read_sha: 3937f9048f97c0e3cd28ab4c492ddef003895f23
+protocols_read_sha: ead9cafa92dd96d6fa0daed3178e8d98dd56f5bf
 ---
 
 # Shallow Water Floor Tile Renew: status
@@ -52,3 +53,13 @@ Check it with `scripts/Check-Status.ps1 -Mod <Folder>` (no ERROR) before the com
 - ChatGPT review 2026-11-11 (page 1 of 1): 2 wordings applied in `RuneFertileWater.description` ("assez basse" to "assez peu profonde", "jeter comme pont" to "aucun pont ne peut y être construit"); "ensemencée" kept (faithful to "seeded"); no `PUBLICATION.md` yet (due at `writeDocs`).
 - Virginie's review (6.g): validated 2026-11-11, revision d32bc13, no correction requested.
 - In-game check (raw keys, fallback text, clipping): `unverified` until `playTests`.
+
+## Tests (writeTests)
+
+2026-11-11, revision `40d6e4f`.
+
+- 7.a Scenarios: `TESTING.md` (figures of the public text checked against the game's defs, 6 in-game scenarios).
+- 7.b Automated tests: no test project (no code). Not applicable beyond the shared checks, rerun today: `Check-ModBasics` PASS, `Check-Translations` PASS, `Check-DefInjected` 4 keys 0 error, `Check-PatchTargets` PASS (0 operation), `Check-Textures` PASS. No `Rule-OwnValues.ps1`: two defs, nine facts, all proved by reading in `TESTING.md`; a script would repeat that table. `Tests/Test-Mod.ps1` skeleton comes with the CI/CD pre-publication, not before.
+- 7.c XML tests: `Check-DefRefs` (parents and references resolve), `Check-XmlFields` (2 files, no unknown field), green.
+- 7.d Pickle suite: not written yet. Question sent to NPT through the TM (which terrain steps exist). Behaviours that need the game: build both terrains, sow on fertile water, walk speed, bridge placement.
+- 7.e/7.f: tested sha `40d6e4f`; any later commit to `Mod/` reopens 7.b and 7.c.
