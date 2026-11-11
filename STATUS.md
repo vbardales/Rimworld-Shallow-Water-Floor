@@ -5,7 +5,7 @@ repo: Rimworld-Shallow-Water-Floor
 remote: https://github.com/vbardales/Rimworld-Shallow-Water-Floor.git
 visibility: public
 detached: no
-workflow_stage: code[1.0.0]
+workflow_stage: declareDependencies[1.0.0]
 licence: silent
 licence_at: "2026-11-11: original by rune1993 declares no licence (silent); owner decision: MIT on what is added here only, LICENSE excludes the original work"
 upstream_mod_remotes: N/A      # none found, not searched on GitHub or GitLab (replay 2026-11-11)

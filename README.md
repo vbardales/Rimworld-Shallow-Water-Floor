@@ -2,7 +2,7 @@
 
 Update of rune1993's **Shallow Water Floor Tile** to RimWorld 1.6.
 
-**I am not the author of this mod.** The idea and the original defs are rune1993's — all I did
+**I am not the author of this mod.** The idea and the original defs are rune1993's - all I did
 was the work needed to make it run on 1.6, and the work needed to make it run at all. Credit goes
 to them; mistakes in the update are mine.
 
@@ -13,9 +13,9 @@ Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2217225014 
 Shallow water you can lay down like a floor. Two terrains, both built for 2 wood from the
 **Floors** tab:
 
-- **Shallow water** — behaves like the natural kind. Pawns wade through it, bridges can be built
+- **Shallow water** - behaves like the natural kind. Pawns wade through it, bridges can be built
   over it, nothing grows in it.
-- **Fertile water** — crops grow in it: fertility 1.25, and no movement penalty. As far as the
+- **Fertile water** - crops grow in it: fertility 1.25, and no movement penalty. As far as the
   colony is concerned it is not water any more: nothing can be bridged over it, and it will not
   carry a waterproof conduit.
 
@@ -27,7 +27,7 @@ with terrain it can no longer resolve.
 
 ### The mod never worked, in any version
 
-`terrainAffordanceNeeded` takes **one** value — the game reads it as a single
+`terrainAffordanceNeeded` takes **one** value - the game reads it as a single
 `TerrainAffordanceDef`, not as a list. Both terrains declared it as a list of `Heavy` and `Light`,
 which the parser ran together into `HeavyLight`, a surface no def declares.
 
@@ -37,14 +37,14 @@ provides.
 
 ### Neither terrain had a work cost
 
-`WaterShallowBase` declares no `WorkToBuild`, and the stat's `defaultBaseValue` is `1` — so each
+`WaterShallowBase` declares no `WorkToBuild`, and the stat's `defaultBaseValue` is `1` - so each
 tile was laid instantly. That is free fertile ground for two wood, which is not what the rest of
 the game charges for it:
 
 | Terrain | Work | Compare with |
 | --- | --- | --- |
 | `RuneWaterShallow` | 120 | straw matting 120, wood floor 85 |
-| `RuneFertileWater` | 400 | hydroponics basin 2800 for four tiles — 700 each, plus steel, components and power, for fertility 2.8 |
+| `RuneFertileWater` | 400 | hydroponics basin 2800 for four tiles - 700 each, plus steel, components and power, for fertility 2.8 |
 
 The 2-wood cost, the 1.25 fertility and the zero path cost are the author's and are untouched.
 
@@ -60,7 +60,7 @@ that already uses them.
 
 ## What was left out
 
-`Textures/ShallowWaterFloor.png` — 1.3 MB of preview artwork filed under `Textures/`, which
+`Textures/ShallowWaterFloor.png` - 1.3 MB of preview artwork filed under `Textures/`, which
 nothing points at. Both terrains use the game's own `Terrain/Surfaces/WaterShallowRamp`, as the
 original did.
 
@@ -79,5 +79,5 @@ or any other of my mods, including publishing a continuation of it. All credit m
 
 ## Credits
 
-- **rune1993** — the mod itself.
+- **rune1993** - the mod itself.
 - 1.6 update by Nelim. Written with the help of Claude (Anthropic).
