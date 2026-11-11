@@ -20,7 +20,7 @@ tested_on: never
 remaining:
   - "2026-11-11: unverified: never seen running"
   - "2026-11-11: unverified: upstream git remotes of rune1993's mod not searched"
-  - "2026-11-11: defect: About.xml description names 1.6, must say the latest RimWorld version; Art/ holds files outside the closed set"
+  - "2026-11-11: defect: Art/ holds files outside the closed set (Gallery/, ModIcon-signature-candidate.png, README.md)"
 updated: 2026-11-11
 protocols_read_sha: 0b1d944c390edf1c072330cb3b764ca18c9d3955
 ---
