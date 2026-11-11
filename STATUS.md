@@ -5,7 +5,7 @@ repo: Rimworld-Shallow-Water-Floor
 remote: https://github.com/vbardales/Rimworld-Shallow-Water-Floor.git
 visibility: public
 detached: no
-workflow_stage: makeSources
+workflow_stage: code[1.0.0]
 licence: silent
 licence_at: "2026-11-11: original by rune1993 declares no licence (silent); owner decision: MIT on what is added here only, LICENSE excludes the original work"
 upstream_mod_remotes: N/A      # none found, not searched on GitHub or GitLab (replay 2026-11-11)
@@ -22,7 +22,7 @@ remaining:
   - "2026-11-11: unverified: upstream git remotes of rune1993's mod not searched"
   - "2026-11-11: defect: About.xml description names 1.6, must say the latest RimWorld version; Art/ holds files outside the closed set"
 updated: 2026-11-11
-protocols_read_sha: 95ace8560e9984c780326835d3f343dcaff12325
+protocols_read_sha: 0b1d944c390edf1c072330cb3b764ca18c9d3955
 ---
 
 # Shallow Water Floor Tile Renew: status
