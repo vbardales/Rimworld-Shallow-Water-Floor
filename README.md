@@ -1,4 +1,4 @@
-# Shallow Water Floor Tile 1.6
+# Shallow Water Floor Tile Renew
 
 Update of rune1993's **Shallow Water Floor Tile** to RimWorld 1.6.
 
@@ -77,4 +77,4 @@ or any other of my mods, including publishing a continuation of it. All credit m
 ## Credits
 
 - **rune1993** — the mod itself.
-- 1.6 update by nelim. Written with the help of Claude (Anthropic).
+- 1.6 update by Nelim. Written with the help of Claude (Anthropic).
